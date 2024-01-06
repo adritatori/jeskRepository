@@ -41,8 +41,11 @@ time, mark, audio, video {
 
 body{
   font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
 }
-
+html{
+  scroll-behavior: smooth;
+}
 
 nav{
   display: flex;
