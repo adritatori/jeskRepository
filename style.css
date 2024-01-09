@@ -86,7 +86,7 @@ h1{
 nav ul {
   list-style: none;
   display: flex;
-
+  align-items: center;
 }
 nav .menuItems{
   position: relative;
@@ -97,6 +97,30 @@ nav ul li a{
   margin-right:20px;
   font-size: 18px;
   color: #3D065F;
+}
+
+.dropdown{
+  position: relative;
+  margin-right: 18px;
+}
+.dropdown a {
+  margin-right: 0px;
+}
+.dropdown-content{
+  display: none;
+  position: absolute;
+  background-color: white ;
+  box-shadow: inset 0px 0px 16px 2px #5F27BD;
+  padding: 10px 30px;
+  border-radius: 0px 10px;
+}
+.dropdown-content li{
+  padding-bottom: 10px;
+  cursor: pointer;
+}
+
+.dropdown:hover .dropdown-content{
+  display: block;
 }
 .headerButoons{
   margin-top: 5vh;
@@ -109,6 +133,7 @@ nav ul li a{
   color: white;
   transition: 0.3s ease;
 }
+
 .button1:hover{
   background: linear-gradient(to bottom, #fc9a7a, #f7d24f);
   color: black;

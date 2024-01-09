@@ -4,6 +4,7 @@ const responsiveNavbar = document.querySelector('.responsiveNavbar');
 const closeIcon = document.getElementById('closeIcon');
 const mobilemeanu = document.getElementById("mobile-menu");
 const questions = document.querySelectorAll('.question');
+const dropdown = document.querySelector('.dropdown');
 
 questions.forEach(function(question) {
   question.addEventListener('click', function() {
@@ -73,3 +74,21 @@ function handleScroll() {
 window.addEventListener('scroll', handleScroll);
 
 handleScroll();
+
+function changeLanguage(language) {
+
+  const currentLanguage = dropdown.querySelector('a');
+  currentLanguage.innerHTML = language;
+
+  // Remove existing selected class
+  const selectedLanguage = dropdown.querySelector('.selected');
+  if (selectedLanguage) {
+    selectedLanguage.classList.remove('selected');
+  }
+
+  // Add selected class to the clicked language
+  const clickedLanguage = dropdown.querySelector(`[onclick="changeLanguage('${language}')]`);
+  clickedLanguage.classList.add('selected');
+
+  // Add logic here to handle language change as needed
+}
