@@ -1,4 +1,4 @@
-const usageMenu = document.getElementById('useageMenu');
+const usageMenus = document.querySelectorAll(".useageMenu");
 const usageContent = document.querySelector('.useage');
 const responsiveNavbar = document.querySelector('.responsiveNavbar');
 const closeIcon = document.getElementById('closeIcon');
@@ -36,11 +36,15 @@ closeIcon.addEventListener('click', function() {
     mobilemeanu.style.display = "none";
   }
 });
-usageMenu.addEventListener('mouseover', function(){
-  usageContent.style.display = "block";
-});
-usageMenu.addEventListener('mouseout', function(){
-  usageContent.style.display = "none";
+usageMenus.forEach(usageMenu => {
+
+  usageMenu.addEventListener('mouseover', function(){
+      usageContent.style.display = "block";
+  });
+
+  usageMenu.addEventListener('mouseout', function(){
+      usageContent.style.display = "none";
+  });
 });
 
 usageContent.addEventListener('mouseover', function(){
