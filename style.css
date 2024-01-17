@@ -836,8 +836,9 @@ footer{
 }
 .locationHeader .content h1{
   padding-bottom: 30px;
+  text-align: left;
 }
-.locationHeader .content h1,p{
+.locationHeader .content p{
   text-align: left;
 }
 .countries {
