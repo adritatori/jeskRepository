@@ -23,6 +23,15 @@ time, mark, audio, video {
   font: inherit;
   vertical-align: baseline;
 }
+input:focus,
+      textarea:focus,
+      select:focus,
+      a:focus {
+        outline: none;
+      }
+ a{
+  color: #3D065F;
+ }     
 /* Variables */
 :root {
   --black: #666;
@@ -842,14 +851,106 @@ footer{
 .flag{
   width: 90px;
   height: 90px;
-  padding: 0 5px;
+  padding: 0 3px;
 }
 .flags1{
   background: #dfdfdf;
   padding: 3vh 0;
 }
-.flagss{
-  /* display: inline; */
+.signinbox form input{
+  display: block;
+}
+.sigininsection{
+  display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+.signin{
+  background: white;
+  box-shadow: inset 0px 0px 35px 9px #5F27BD;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.flags2{
+  transform: rotate(-90deg);
+  margin-left: -500px;
+  margin-top: -197px;
+}
+
+#siginSec{
+  background: linear-gradient(-45deg, #3D065F, #5F27BD, #540685,#963ecc );
+	background-size: 400% 400%;
+  animation: gradient 5s ease infinite;
+  padding: 10vh;
+  overflow: hidden;
+}
+form input{
+    border: none;
+    border-bottom: 2px solid #3D065F;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    width: 100%;
+}
+.verfybox{
+  width: 81px;
+    height: 28px;
+    border: 1px solid;
+    margin-right: 15px;
+}
+.verficationCode{
+  display: flex;
+}
+.signinbox{
+  text-align: center;
+  padding: 10vh 10vh;
+}
+.submitClass{
+  padding: 10px 60px;
+    border-radius: 50px 0px;
+    border: none;
+    background: linear-gradient(-45deg, #3D065F, #5F27BD, #540685,#963ecc );
+    color: white;
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
+    margin-top: 5vh;
+    
+}
+.submitClass:hover{
+  background:  #f7d24f;
+  color: white;
+  border: 1px solid #3D065F;
+}
+#logininSec{
+  background: white;
+  padding: 10vh;
+  overflow: hidden;
+  color: white;
+}
+.login{
+  background: #5F27BD;
+  overflow: hidden;
+  border-radius: 20px;
+}
+#logininSec input{
+  background: transparent;
+  color: white;
+}
+#logininSec .submitClass{
+  padding: 10px 60px;
+    border-radius: 50px 0px;
+    border: none;
+    background: white;
+    color: #3D065F;
+    margin-top: 5vh;
+    
+}
+#logininSec input::placeholder {
+  color: #ffffff;
+}
+.submitClass:hover{
+  background: white;
+  color: #3D065F;
+  border: 1px solid #3D065F;
 }
 @media screen and (max-width: 1178px) {
   .detailsimage img{
@@ -862,6 +963,10 @@ footer{
   }
   h1 {
     font-size: 48px;
+  }
+  .flag{
+      width: 40px;
+      height: 40px;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -905,6 +1010,9 @@ footer{
     text-align: center;
     margin-left: 35%;
     margin-top: 35vh;
+  }
+  .flags2{
+    display: none;
   }
   .locationHeader img {
     width: 259px;
