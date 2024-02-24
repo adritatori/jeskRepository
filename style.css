@@ -773,7 +773,6 @@ footer{
 }
 .price:hover .button2{
     background: linear-gradient(to bottom, #3D065F, #5F27BD);
-    
 }
 .price h3{
   font-size: 29px;
@@ -877,7 +876,10 @@ footer{
   margin-left: -500px;
   margin-top: -197px;
 }
-
+#chartdiv{
+  width: 500px;
+  height: 500px;
+}
 #siginSec{
   background: linear-gradient(-45deg, #3D065F, #5F27BD, #540685,#963ecc );
 	background-size: 400% 400%;
@@ -948,15 +950,92 @@ form input{
 #logininSec input::placeholder {
   color: #ffffff;
 }
-.submitClass:hover{
+
+
+.dashboardSidebar{
+  display: flex;
+}
+
+.dashboard nav{
+    position: relative;
+}
+.sidenav{
   background: white;
-  color: #3D065F;
+    padding: 37px 0px;
+    border-radius: 20px 0px;
+    box-shadow: inset -6px -6px 16px -1px #e0e0e0;
+    margin-left: 20px;
+}
+
+.sidenav div{
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 70px;
+}
+.sidenav div:hover{
+  background: #5F27BD;
+}
+
+.sidenav div:hover a{
+  color: white;
+}
+.remainingTraffic{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+.boxoftraffic{
+  text-align: end;
+  margin-left: 20px;
+  background: linear-gradient(-45deg, #3D065F, #5F27BD, #540685,#963ecc );
+	background-size: 400% 400%;
+  animation: gradient 5s ease infinite;
+  color: white;
+  padding-top: 20px;
+  width: 192px;
+}
+.boxoftraffic div{
+  background: white;
+  padding: 0px 20px;
   border: 1px solid #3D065F;
+}
+.boxoftraffic h3{
+  font-size: 30px;
+  font-weight: 600;
+  padding-right: 20px;
+}
+.boxoftraffic p{
+  padding-right: 20px;
+  padding-bottom: 10px;
+}
+.desclaimer{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 20px;
+}
+.housingproxy1{
+  padding: 3vh 3vh;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid;
+  align-self: flex-start;
+  margin: 2vh;
+  margin-right: 0vh;
+}
+
+.housingproxy1:last-child{
+  margin-right: 2vh;
+}
+.housingproxy1 h2{
+  font-size: 20px;
+  color: #3D065F;
 }
 @media screen and (max-width: 1178px) {
   .detailsimage img{
     height: auto;
     width: 400px;
+  }
+  .desclaimer{
+    grid-template-columns: auto auto;
   }
   .detaildSection p{
     height: auto;
@@ -969,38 +1048,59 @@ form input{
       width: 40px;
       height: 40px;
   }
+  .dashboardSidebar{
+    flex-direction: column;
+  }
+  .sidenav div {
+    border-top: 0px;
+   border-bottom: 0px; 
+   padding: 9px 0px;
 }
-@media screen and (max-width: 1024px) {
-  h2{
-    font-size: 26px;
-  }
- .detaildSection h1{
-    font-size: 47px;
-    font-weight: 600;
-  }
-  .menu-toggle {
-    cursor: pointer;
-    margin-right: 7vh;
+.sidenav {
+  background: white;
+  padding: 0px 0px;
+  border-radius: 20px 0px;
+  box-shadow: inset -6px -6px 16px -1px #e0e0e0;
+  margin-left: 0px;
+  justify-content: space-evenly;
+  margin: 10px;
+  display: flex;
 }
-  h4{
-    font-size: 14px;
-  }
-  nav{
-    height: 50px;
-  }
-  nav ul li a {
-    font-size: 14px;
-  }
-  .useageContiner span a h4{
-    color: #3D065F;
-  }
-  .useageContiner{
-    gap: 10;
-  }
+h2{
+  font-size: 26px;
+}
+.remainingTraffic{
+  grid-template-columns: auto auto;
+  gap: 20px;
+  place-items: center;
+}
+.detaildSection h1{
+  font-size: 47px;
+  font-weight: 600;
+}
+.menu-toggle {
+  cursor: pointer;
+  margin-right: 7vh;
+}
+h4{
+  font-size: 14px;
+}
+nav{
+  height: 50px;
+}
+nav ul li a {
+  font-size: 14px;
+}
+.useageContiner span a h4{
+  color: #3D065F;
+}
+.useageContiner{
+  gap: 10;
+}
 
-  .detials{
-    gap: 0vh;
-  }
+.detials{
+  gap: 0vh;
+}
 }
 
 @media screen and (max-width: 900px) {
@@ -1012,6 +1112,10 @@ form input{
     margin-left: 35%;
     margin-top: 35vh;
   }
+
+  #chartdiv{
+  width: 300px;
+  height: 300px;}
   .flags2{
     display: none;
   }
@@ -1185,6 +1289,12 @@ h1 {
 @media screen and (max-width: 530px) {
   .footerContainer{
     grid-template-columns: auto;
+  }
+  .remainingTraffic{
+    grid-template-columns: auto;
+  }
+  .sidenav{
+    display: block;
   }
   .headerButoons {
     display: block;}
