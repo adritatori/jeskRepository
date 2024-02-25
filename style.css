@@ -1029,6 +1029,12 @@ form input{
   font-size: 20px;
   color: #3D065F;
 }
+.proxy-setup input, textarea{
+  width: 100%;
+}
+.proxy-page .desclaimer{
+  width: 100%;
+}
 @media screen and (max-width: 1178px) {
   .detailsimage img{
     height: auto;

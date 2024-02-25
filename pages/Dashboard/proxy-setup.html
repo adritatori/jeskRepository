@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />  
+  <link rel="stylesheet" href="../../style.css">
+  <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/map.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/geodata/data/countries2.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
+
+<style>
+  #chartdiv {
+  width: 100%;
+  height: 500px;
+}
+</style>
+  <title>jeskahuojin</title>
+</head>
+<body class="dashboard">
+    <!--Navigation Bar Start-->
+    <nav>
+      <a href="../index.html" class="logo"><h2>GS PROXY</h2></a>
+      <ul class="menuItems">
+        <li><a title="Home" href="../../index.html">Home</a></li>
+      <li><a title="About us" href="../../index.html#details">Details</a></li>
+      <li><a title="Services" href="../../index.html#features">Services</a></li>
+        <li class=""><a title="Pricing" href="../price.html">Pricing</a></li>
+        <li><a title="Solution" href="../../index.html#solution">Solution</a></li>
+        <li class=""><a title="Useage" href="#" class="useageMenu menuUsage">Useage</a></li>
+        <li class=""><a title="Inquery" href="../../index.html#inquery">Inquery</a></li>
+        <div class="useage">
+          <div class="useageContiner">
+                    <span>
+                      <a title="#" href="#">
+                        <h4>Market Research</h4>
+                        <p>Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet,</p>
+                      </a>
+                    </span>
+                    <span>
+                      <a title="#" href="#">
+                        <h4>Market Research</h4>
+                        <p>Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet,</p>
+                      </a>
+                    </span>
+                    <span>
+                      <a title="#" href="#">
+                        <h4>Market Research</h4>
+                        <p>Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet,</p>
+                      </a>
+                    </span>
+                    <span>
+                      <a title="#" href="#">
+                        <h4>Market Research</h4>
+                        <p>Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet,</p>
+                      </a>
+                    </span>
+               
+          </div>
+         
+        </div>
+        <li class=""><a title="Location" href="../coutryDot.html">Location</a></li>
+      </ul>
+      <ul class="menuItems">
+        <!-- <li><a href="">En&#11206;</a></li> -->
+        <li>
+          <div class="dropdown">
+          <a href="#" onclick="changeLanguage('en')">EN</a><span>&#11206;</span>
+          <div class="dropdown-content">
+            <div onclick="changeLanguage('en')">EN</div>
+            <div onclick="changeLanguage('zh')">ZH</div>
+            <div onclick="changeLanguage('ru')">RU</div>
+            <div onclick="changeLanguage('ms')">MS</div>
+            <div onclick="changeLanguage('vi')">VI</div>
+            <div onclick="changeLanguage('es')">ES</div>
+          </div>
+        </div>
+        </li>
+        <li><a href="./signin.html">My account</a></li>
+        <li><a href="./signin.html" class="button1">Logout</a></li>
+      </ul>
+      <div class="menu-toggle" id="mobile-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+   
+  </nav>
+  <div class="responsiveNavbar">
+    <div class="cross-icon" id="closeIcon">
+      <div class="bar"></div>
+      <div class="bar"></div>
+  </div>
+    <ul class="responsiveMenuItems">
+      <li><a title="Home" href="#home">Home</a></li>
+      <li><a title="About us" href="#details">Details</a></li>
+      <li><a title="Services" href="#features">Services</a></li>
+      <li><a title="Pricing" href="#">Pricing</a></li>
+      <li><a title="Solution" href="#solution">Solution</a></li>
+      <li><a title="Inquery" href="#inquery">Inquery</a></li>
+      <li><a href="../../logout.html">Logout</a></li>
+      <li><a href="">En&#11206;</a></li>
+    </ul>
+</div>
+<div></div>
+<div class="dashboardMain proxy-page">
+  <div class="dashboardSidebar">
+    <div class="sidenav">
+      <div><a href="dashboard.html">Dashboard</a></div>
+      <div><a href="dynamic-housing-proxy.html">Dynamic Housing Proxy</a></div>
+      <div><a href="proxy-setup.html">Proxy Setup</a></div>
+      <div><a href="mybill.html">My bill</a></div>
+    </div>
+    <div class="desclaimer">
+        <div class="proxy-setup">
+          <h2>Proxy Setup</h2>
+          <p>Test proxy connection with CURL:</p>
+          <input type="text" value='curl -x "http://TdvxE1203055620:U9apz5cP2VVXbfrD99eL@proxy-http.gsproxy.com:1337" "https://ipinfo.io"' style="display: block;">
+          <textarea name="text" id="textarea" cols="30" rows="10"  style="display: block;">proxy-http.gsproxy.com:1337:TdvxE1203055620:U9apz5cP2VVXbfrD99eL</textarea>
+          <button id="copyButton"  style="display: inline-block;" class="button1">Copy Text</button>
+          <button id="downloadButton"  style="display: inline-block;" class="button1">Download as .txt</button>
+        </div>
+    </div>
+  </div>
+  <div class="proxy-setup">
+    <h1>Proxy Setup</h1>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var copyButton = document.getElementById('copyButton');
+  var downloadButton = document.getElementById('downloadButton');
+  var textarea = document.getElementById('textarea');
+
+  copyButton.addEventListener('click', function() {
+    textarea.select();
+    document.execCommand('copy');
+    alert('Text copied to clipboard!');
+  });
+
+  downloadButton.addEventListener('click', function() {
+    var textToSave = textarea.value;
+    var hiddenElement = document.createElement('a');
+    hiddenElement.href = 'data:text/plain;charset=utf-8,' + encodeURIComponent(textToSave);
+    hiddenElement.target = '_blank';
+    hiddenElement.download = 'proxy_setup.txt';
+    hiddenElement.click();
+  });
+});
+</script>
+  </script>
+  
+</body>
+</html>
