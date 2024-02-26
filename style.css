@@ -364,7 +364,7 @@ Header h1{
 }
 .useageContiner{
   display: grid;
-  grid-template-columns: 180px 180px;
+  grid-template-columns: 180px 180px 180px;
   gap: 20px;
   width: fit-content;
 }
