@@ -1032,9 +1032,22 @@ form input{
 .proxy-setup input, textarea{
   width: 100%;
 }
+.proxy-setup-code{
+  padding: 0 20px;
+}
 .proxy-page .desclaimer{
   width: 100%;
 }
+.div-proxy-box{
+  display: flex;
+}
+.div-proxy-box .left{
+  margin-left: 25px;
+}
+.div-proxy-box .right select{
+  width: 100%;
+}
+
 @media screen and (max-width: 1178px) {
   .detailsimage img{
     height: auto;
@@ -1118,7 +1131,12 @@ nav ul li a {
     margin-left: 35%;
     margin-top: 35vh;
   }
-
+  .div-proxy-box{
+flex-direction: column-reverse;
+  }
+  .div-proxy-box .left{
+    margin-left: 0px;
+  }
   #chartdiv{
   width: 300px;
   height: 300px;}

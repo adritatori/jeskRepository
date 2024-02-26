@@ -17,6 +17,43 @@
   width: 100%;
   height: 500px;
 }
+  /* Style the container */
+  .tabs-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Style the tab buttons */
+  .tablink {
+    background-color: #f2f2f2;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    transition: 0.3s;
+    font-size: 16px;
+    margin: 5px;
+  }
+
+  .tablink:hover {
+    background-color: #ddd;
+  }
+
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ccc;
+    flex: 1 0 100%; /* Make content responsive */
+    margin-top: 10px;
+  }
+
+  /* Show the tab content when tab is clicked */
+  .tabcontent.show {
+    display: block;
+  }
+
 </style>
   <title>jeskahuojin</title>
 </head>
@@ -117,16 +154,397 @@
     <div class="desclaimer">
         <div class="proxy-setup">
           <h2>Proxy Setup</h2>
-          <p>Test proxy connection with CURL:</p>
-          <input type="text" value='curl -x "http://TdvxE1203055620:U9apz5cP2VVXbfrD99eL@proxy-http.gsproxy.com:1337" "https://ipinfo.io"' style="display: block;">
-          <textarea name="text" id="textarea" cols="30" rows="10"  style="display: block;">proxy-http.gsproxy.com:1337:TdvxE1203055620:U9apz5cP2VVXbfrD99eL</textarea>
-          <button id="copyButton"  style="display: inline-block;" class="button1">Copy Text</button>
-          <button id="downloadButton"  style="display: inline-block;" class="button1">Download as .txt</button>
+          <div class="div-proxy-box">
+              
+                <div class="right">
+                  <label for="country">Country:</label>
+                  <select id="country" name="country">
+                    <option value="Afghanistan">Afghanistan</option>
+                    <option value="Albania">Albania</option>
+                    <option value="Algeria">Algeria</option>
+                    <option value="Andorra">Andorra</option>
+                    <option value="Angola">Angola</option>
+                    <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="Armenia">Armenia</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Austria">Austria</option>
+                    <option value="Azerbaijan">Azerbaijan</option>
+                    <option value="Bahamas">Bahamas</option>
+                    <option value="Bahrain">Bahrain</option>
+                    <option value="Bangladesh">Bangladesh</option>
+                    <option value="Barbados">Barbados</option>
+                    <option value="Belarus">Belarus</option>
+                    <option value="Belgium">Belgium</option>
+                    <option value="Belize">Belize</option>
+                    <option value="Benin">Benin</option>
+                    <option value="Bhutan">Bhutan</option>
+                    <option value="Bolivia">Bolivia</option>
+                    <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+                    <option value="Botswana">Botswana</option>
+                    <option value="Brazil">Brazil</option>
+                    <option value="Brunei">Brunei</option>
+                    <option value="Bulgaria">Bulgaria</option>
+                    <option value="Burkina Faso">Burkina Faso</option>
+                    <option value="Burundi">Burundi</option>
+                    <option value="Cabo Verde">Cabo Verde</option>
+                    <option value="Cambodia">Cambodia</option>
+                    <option value="Cameroon">Cameroon</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Central African Republic">Central African Republic</option>
+                    <option value="Chad">Chad</option>
+                    <option value="Chile">Chile</option>
+                    <option value="China">China</option>
+                    <option value="Colombia">Colombia</option>
+                    <option value="Comoros">Comoros</option>
+                    <option value="Congo (Congo-Brazzaville)">Congo (Congo-Brazzaville)</option>
+                    <option value="Costa Rica">Costa Rica</option>
+                    <option value="Croatia">Croatia</option>
+                    <option value="Cuba">Cuba</option>
+                    <option value="Cyprus">Cyprus</option>
+                    <option value="Czech Republic">Czech Republic</option>
+                    <option value="Democratic Republic of the Congo">Democratic Republic of the Congo</option>
+                    <option value="Denmark">Denmark</option>
+                    <option value="Djibouti">Djibouti</option>
+                    <option value="Dominica">Dominica</option>
+                    <option value="Dominican Republic">Dominican Republic</option>
+                    <option value="East Timor (Timor-Leste)">East Timor (Timor-Leste)</option>
+                    <option value="Ecuador">Ecuador</option>
+                    <option value="Egypt">Egypt</option>
+                    <option value="El Salvador">El Salvador</option>
+                    <option value="Equatorial Guinea">Equatorial Guinea</option>
+                    <option value="Eritrea">Eritrea</option>
+                    <option value="Estonia">Estonia</option>
+                    <option value="Eswatini (fmr. "Swaziland")">Eswatini (fmr. "Swaziland")</option>
+                    <option value="Ethiopia">Ethiopia</option>
+                    <option value="Fiji">Fiji</option>
+                    <option value="Finland">Finland</option>
+                    <option value="France">France</option>
+                    <option value="Gabon">Gabon</option>
+                    <option value="Gambia">Gambia</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Germany">Germany</option>
+                    <option value="Ghana">Ghana</option>
+                    <option value="Greece">Greece</option>
+                    <option value="Grenada">Grenada</option>
+                    <option value="Guatemala">Guatemala</option>
+                    <option value="Guinea">Guinea</option>
+                    <option value="Guinea-Bissau">Guinea-Bissau</option>
+                    <option value="Guyana">Guyana</option>
+                    <option value="Haiti">Haiti</option>
+                    <option value="Honduras">Honduras</option>
+                    <option value="Hungary">Hungary</option>
+                    <option value="Iceland">Iceland</option>
+                    <option value="India">India</option>
+                    <option value="Indonesia">Indonesia</option>
+                    <option value="Iran">Iran</option>
+                    <option value="Iraq">Iraq</option>
+                    <option value="Ireland">Ireland</option>
+                    <option value="Israel">Israel</option>
+                    <option value="Italy">Italy</option>
+                    <option value="Ivory Coast">Ivory Coast</option>
+                    <option value="Jamaica">Jamaica</option>
+                    <option value="Japan">Japan</option>
+                    <option value="Jordan">Jordan</option>
+                    <option value="Kazakhstan">Kazakhstan</option>
+                    <option value="Kenya">Kenya</option>
+                    <option value="Kiribati">Kiribati</option>
+                    <option value="Kosovo">Kosovo</option>
+                    <option value="Kuwait">Kuwait</option>
+                    <option value="Kyrgyzstan">Kyrgyzstan</option>
+                    <option value="Laos">Laos</option>
+                    <option value="Latvia">Latvia</option>
+                    <option value="Lebanon">Lebanon</option>
+                    <option value="Lesotho">Lesotho</option>
+                    <option value="Liberia">Liberia</option>
+                    <option value="Libya">Libya</option>
+                    <option value="Liechtenstein">Liechtenstein</option>
+                    <option value="Lithuania">Lithuania</option>
+                    <option value="Luxembourg">Luxembourg</option>
+                    <option value="Madagascar">Madagascar</option>
+                    <option value="Malawi">Malawi</option>
+                    <option value="Malaysia">Malaysia</option>
+                    <option value="Maldives">Maldives</option>
+                    <option value="Mali">Mali</option>
+                    <option value="Malta">Malta</option>
+                    <option value="Marshall Islands">Marshall Islands</option>
+                    <option value="Mauritania">Mauritania</option>
+                    <option value="Mauritius">Mauritius</option>
+                    <option value="Mexico">Mexico</option>
+                    <option value="Micronesia">Micronesia</option>
+                    <option value="Moldova">Moldova</option>
+                    <option value="Monaco">Monaco</option>
+                    <option value="Mongolia">Mongolia</option>
+                    <option value="Montenegro">Montenegro</option>
+                    <option value="Morocco">Morocco</option>
+                    <option value="Mozambique">Mozambique</option>
+                    <option value="Myanmar (formerly Burma)">Myanmar (formerly Burma)</option>
+                    <option value="Namibia">Namibia</option>
+                    <option value="Nauru">Nauru</option>
+                    <option value="Nepal">Nepal</option>
+                    <option value="Netherlands">Netherlands</option>
+                    <option value="New Zealand">New Zealand</option>
+                    <option value="Nicaragua">Nicaragua</option>
+                    <option value="Niger">Niger</option>
+                    <option value="Nigeria">Nigeria</option>
+                    <option value="North Korea">North Korea</option>
+                    <option value="North Macedonia">North Macedonia</option>
+                    <option value="Norway">Norway</option>
+                    <option value="Oman">Oman</option>
+                    <option value="Pakistan">Pakistan</option>
+                    <option value="Palau">Palau</option>
+                    <option value="Palestine State">Palestine State</option>
+                    <option value="Panama">Panama</option>
+                    <option value="Papua New Guinea">Papua New Guinea</option>
+                    <option value="Paraguay">Paraguay</option>
+                    <option value="Peru">Peru</option>
+                    <option value="Philippines">Philippines</option>
+                    <option value="Poland">Poland</option>
+                    <option value="Portugal">Portugal</option>
+                    <option value="Qatar">Qatar</option>
+                    <option value="Romania">Romania</option>
+                    <option value="Russia">Russia</option>
+                    <option value="Rwanda">Rwanda</option>
+                    <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+                    <option value="Saint Lucia">Saint Lucia</option>
+                    <option value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option>
+                    <option value="Samoa">Samoa</option>
+                    <option value="San Marino">San Marino</option>
+                    <option value="Sao Tome and Principe">Sao Tome and Principe</option>
+                    <option value="Saudi Arabia">Saudi Arabia</option>
+                    <option value="Senegal">Senegal</option>
+                    <option value="Serbia">Serbia</option>
+                    <option value="Seychelles">Seychelles</option>
+                    <option value="Sierra Leone">Sierra Leone</option>
+                    <option value="Singapore">Singapore</option>
+                    <option value="Slovakia">Slovakia</option>
+                    <option value="Slovenia">Slovenia</option>
+                    <option value="Solomon Islands">Solomon Islands</option>
+                    <option value="Somalia">Somalia</option>
+                    <option value="South Africa">South Africa</option>
+                    <option value="South Korea">South Korea</option>
+                    <option value="South Sudan">South Sudan</option>
+                    <option value="Spain">Spain</option>
+                    <option value="Sri Lanka">Sri Lanka</option>
+                    <option value="Sudan">Sudan</option>
+                    <option value="Suriname">Suriname</option>
+                    <option value="Sweden">Sweden</option>
+                    <option value="Switzerland">Switzerland</option>
+                    <option value="Syria">Syria</option>
+                    <option value="Taiwan">Taiwan</option>
+                    <option value="Tajikistan">Tajikistan</option>
+                    <option value="Tanzania">Tanzania</option>
+                    <option value="Thailand">Thailand</option>
+                    <option value="Togo">Togo</option>
+                    <option value="Tonga">Tonga</option>
+                    <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+                    <option value="Tunisia">Tunisia</option>
+                    <option value="Turkey">Turkey</option>
+                    <option value="Turkmenistan">Turkmenistan</option>
+                    <option value="Tuvalu">Tuvalu</option>
+                    <option value="Uganda">Uganda</option>
+                    <option value="Ukraine">Ukraine</option>
+                    <option value="United Arab Emirates">United Arab Emirates</option>
+                    <option value="United Kingdom">United Kingdom</option>
+                    <option value="United States of America">United States of America</option>
+                    <option value="Uruguay">Uruguay</option>
+                    <option value="Uzbekistan">Uzbekistan</option>
+                    <option value="Vanuatu">Vanuatu</option>
+                    <option value="Vatican City (Holy See)">Vatican City (Holy See)</option>
+                    <option value="Venezuela">Venezuela</option>
+                    <option value="Vietnam">Vietnam</option>
+                    <option value="Yemen">Yemen</option>
+                    <option value="Zambia">Zambia</option>
+                    <option value="Zimbabwe">Zimbabwe</option>
+                  </select>
+                  <br><br>
+
+    <label for="regionState">Region/State:</label>
+    <select id="regionState" name="regionState">
+      <option value="State1">State1</option>
+      <option value="State2">State2</option>
+      <option value="State3">State3</option>
+      <!-- Add more regions/states as needed -->
+    </select><br><br>
+
+    <label for="city">City:</label>
+    <select id="city" name="city">
+      <option value="City1">City1</option>
+      <option value="City2">City2</option>
+      <option value="City3">City3</option>
+      <!-- Add more cities as needed -->
+    </select><br><br>
+
+    <label for="quantity">Quantity:</label>
+    <select id="quantity" name="quantity">
+      <option value="-5">-5</option>
+      <option value="1">1</option>
+      <option value="5">5</option>
+      <option value="10">10</option>
+    </select><br><br>
+
+    <label for="format">Format:</label>
+    <select id="format" name="format">
+      <option value="http://username:password@hostname:port">http://username:password@hostname:port</option>
+      <option value="username:password@hostname:port">username:password@hostname:port</option>
+      <option value="hostname:port:username:password">hostname:port:username:password</option>
+    </select><br><br>
+
+    <label for="sessionDuration">Session Duration:</label>
+    <select id="sessionDuration" name="sessionDuration">
+      <option value="Rotating">Rotating</option>
+      <option value="1 Minutes">1 Minutes</option>
+      <option value="2 Minutes">2 Minutes</option>
+      <option value="3 Minutes">3 Minutes</option>
+      <option value="5 Minutes">5 Minutes</option>
+      <option value="10 Minutes">10 Minutes</option>
+      <option value="15 Minutes">15 Minutes</option>
+      <option value="20 Minutes">20 Minutes</option>
+      <option value="25 Minutes">25 Minutes</option>
+      <option value="30 Minutes">30 Minutes</option>
+
+    </select><br><br>
+
+                </div>
+
+                <div class="left">
+                  <p>Test proxy connection with CURL:</p>
+                  <input type="text" value='curl -x "http://TdvxE1203055620:U9apz5cP2VVXbfrD99eL@proxy-http.gsproxy.com:1337" "https://ipinfo.io"' style="display: block;">
+                  <textarea name="text" id="textarea" cols="30" rows="10"  style="display: block;">proxy-http.gsproxy.com:1337:TdvxE1203055620:U9apz5cP2VVXbfrD99eL</textarea>
+                  <button id="copyButton"  style="display: inline-block;" class="button1">Copy Text</button>
+                  <button id="downloadButton"  style="display: inline-block;" class="button1">Download as .txt</button>
+                </div>
+          </div>
+          
         </div>
     </div>
   </div>
-  <div class="proxy-setup">
-    <h1>Proxy Setup</h1>
+  <div class="proxy-setup-code">
+    <h2>CODE EXAMPLES</h2>
+    <div class="tabs">
+      <button class="tablink" onclick="openTab(event, 'java')">JAVA Code</button>
+      <button class="tablink" onclick="openTab(event, 'nodejs')">NodeJS Code</button>
+      <button class="tablink" onclick="openTab(event, 'python')">Python3 Code</button>
+      <button class="tablink" onclick="openTab(event, 'php')">PHP Code</button>
+      <button class="tablink" onclick="openTab(event, 'shell')">Shell Code</button>
+    
+      <div id="java" class="tabcontent">
+  
+        <p><pre>
+          import java.io.IOException;
+          
+          public class OkHttpClientWithProxyCredentialsExample {
+          
+              public static void main(String[] args) {
+                  String proxyHost = "proxy-http.gsproxy.com";
+                  int proxyPort = 1337;
+          
+                  String proxyUsername = "TdvxE1203055620";
+                  String proxyPassword = "U9apz5cP2VVXbfrD99eL";
+          
+                  OkHttpClient client = new OkHttpClient.Builder()
+                          .proxySelector(proxy -> List.of(new Proxy(Proxy.Type.HTTP, new InetSocketAddress(proxyHost, proxyPort))))
+                          .authenticator(new Authenticator() {
+                              @Override
+                              public Request authenticate(Route route, Response response) throws IOException {
+                                  String credentials = Credentials.basic(proxyUsername, proxyPassword);
+                                  return response.request().newBuilder()
+                                          .header("Proxy-Authorization", credentials)
+                                          .build();
+                              }
+                          })
+                          .build();
+                  Request request = new Request.Builder()
+                          .url("http://ip-api.com/json")
+                          .get()
+                          .build();
+          
+                  try {
+                      Response response = client.newCall(request).execute();
+                      System.out.println(response.body().string());
+                      
+                  } catch (IOException e) {
+                      e.printStackTrace();
+                  }
+              }
+          }
+          </pre></p>
+      </div>
+    
+      <div id="nodejs" class="tabcontent">
+        <p><pre>var axios = require('axios');
+          var username = 'TdvxE1203055620';
+          var password = 'U9apz5cP2VVXbfrD99eL';
+          var PROXYSCRAPE_HOSTNAME = 'proxy-http.gsproxy.com';
+          var PROXYSCRAPE_PORT = 1337;
+          axios
+          .get('http://ip-api.com/json', {
+              proxy: {
+              protocol: 'http',
+              host: PROXYSCRAPE_HOSTNAME,
+              port: PROXYSCRAPE_PORT,
+              auth: {
+                  username,
+                  password,
+              },
+              },
+          })
+          .then((res) => {
+              console.log(res.data);
+          })
+          .catch((err) => console.error(err));
+                                                          </pre></p>
+      </div>
+    
+      <div id="python" class="tabcontent">
+       
+        <p><pre>
+          #!/usr/bin/env python3
+import requests
+username = "TdvxE1203055620";
+password = "U9apz5cP2VVXbfrD99eL";
+proxy = "proxy-http.gsproxy.com:1337"
+proxy_auth = "{}:{}@{}".format(username, password, proxy)
+proxies = {
+    "http":"http://{}".format(proxy_auth),
+    "https":"https://{}".format(proxy_auth)
+}
+urlToGet = "http://ip-api.com/json"
+r = requests.get(urlToGet , proxies=proxies)
+print("Response:\n{}".format(r.text))
+        </pre></p>
+      </div>
+    
+      <div id="php" class="tabcontent">
+      
+        <p><pre> 
+          $username = 'TdvxE1203055620';
+          $password = 'U9apz5cP2VVXbfrD99eL';
+          $PROXYSCRAPE_PORT = 1337;
+          $PROXYSCRAPE_HOSTNAME = 'proxy-http.gsproxy.com';
+          $urlToGet = 'http://ip-api.com/json';
+          $ch = curl_init();
+          curl_setopt($ch, CURLOPT_URL, $urlToGet);
+          curl_setopt($ch, CURLOPT_HEADER, 0);
+          curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+          curl_setopt($ch, CURLOPT_PROXYPORT, $PROXYSCRAPE_PORT);
+          curl_setopt($ch, CURLOPT_PROXYTYPE, 'HTTP');
+          curl_setopt($ch, CURLOPT_PROXY, $PROXYSCRAPE_HOSTNAME);
+          curl_setopt($ch, CURLOPT_PROXYUSERPWD, $username.':'.$password);
+          $data = curl_exec($ch);
+          curl_close($ch);
+          echo $data;</pre></p>
+      </div>
+    
+      <div id="shell" class="tabcontent">
+    
+        <p><pre> #!/usr/bin/env bash
+          export USERNAME= TdvxE1203055620;
+          export PASSWORD= U9apz5cP2VVXbfrD99eL;
+          export PROXYSCRAPE_HOSTNAME=proxy-http.gsproxy.com:1337
+          curl -x http://$USERNAME:$PASSWORD@$PROXYSCRAPE_HOSTNAME http://ip-api.com/json && echo</pre></p>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -151,8 +569,31 @@ document.addEventListener('DOMContentLoaded', function() {
     hiddenElement.click();
   });
 });
+// Function to switch between tabs
+function openTab(evt, tabName) {
+  var i, tabcontent, tablinks;
+  
+  // Hide all tab contents
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  
+  // Remove "active" class from all tab buttons
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  
+  // Show the clicked tab content and mark the button as active
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Set the default tab to be open
+document.getElementById("java").style.display = "block";
+document.getElementsByClassName("tablink")[0].className += " active";
 </script>
-  </script>
   
 </body>
 </html>
